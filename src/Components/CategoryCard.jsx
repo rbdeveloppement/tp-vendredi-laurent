@@ -1,19 +1,20 @@
 import React from "react";
 
 
-const CardProduct = () => {
+const CardProduct = ({title, description, imageId}) => {
   return (
     <>
-      <div className="card col-3">
+      <div className="card-img-top shadow mb-5 bg-body rounded" >
         
-        <img src="./img/chien.jpg"
-         className="card-img-top " />
+        <img src={"https://picsum.photos/id/" + imageId + "/600/400"}
+        className="card-img"
+         />
         <div className="card-body">
-          <h5 className="card-title">titre</h5>
+          <h5 className="card-title">{title}</h5>
         </div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsam magnam perferendis quae reiciendis,
-             sit debitis, blanditiis odio voluptatem quibusdam dignissimos ratione quidem atque quaerat aliquid accusamus dolorem quas fugiat?</span>
+        <span className="card-title">{description}</span>
       </div>
+      
     </>
   );
 };
