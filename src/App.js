@@ -9,14 +9,14 @@ import CategoryCard from './Components/CategoryCard'
 function App() {
 
 const productdescriptif = [
-  {title: "Femmes",description :"la mode pour elles", Image:"./assets/femmes.jpg"},
-  {title: "Hommes",description :"la mode pour lui", image :"../assets/hommes.jpg"},
-  {title: "Enfants",description :"la mode pour eux", image :"../assets/enfants.jpg"},
-  {title: "Bébés",description :"la mode pour eux aussi", image :"../assets/bebe.jpg"}
+  {title: "Femmes",description :"la mode pour elles", Image :'./assets/img/femmes.jpg'},
+  {title: "Hommes",description :"la mode pour lui", image :"./assets/img/hommes.jpg"},
+  {title: "Enfants",description :"la mode pour eux", image :"./assets/img/enfants.jpg"},
+  {title: "Bébés",description :"la mode pour eux aussi", image :"./assets/img/bebe.jpg"}
 ];
 const category = productdescriptif.map((product) => 
-  <div className="col-12 col-lg-3" key={product.id}>
-  <CategoryCard title={product.title} description={product.description} imageId={product.imageId}/>
+  <div className="col-12 col-lg-3" key={product}>
+  <CategoryCard title={product.title} description={product.description} Image={product.Image}/>
   </div>
 )
 
