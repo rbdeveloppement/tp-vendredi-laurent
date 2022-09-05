@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Home from "./pages/HomeScreen";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import CategoryCard from './Components/CategoryCard'
+import FormComponent from "./Components/ContactForm/ContactForm";
+
 
 
 function App() {
@@ -20,18 +22,21 @@ const category = productdescriptif.map((product,id) =>
   </div>
 )
 
-
+const [isDark, setDark] = useState(false)
 
 
 
   return (
     <div>
       <div>
-        <Home />
+        <Home setDark={setDark} isDark={isDark} />
       </div>
       <div className="product-container container">
         <div className="row">
         {category}
+        </div>
+        <div>
+          <FormComponent />
         </div>
       </div>
     </div>
