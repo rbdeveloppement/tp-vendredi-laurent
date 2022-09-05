@@ -3,20 +3,20 @@ import React from "react";
 
 const CardProduct = ({title, description, Image}) => {
   return (
-    <>
+    
       <div className="card-img-top shadow mb-5 bg-body rounded" >
         
       <img  src={Image} alt="" 
-      className="card-img"/>
+      className="card-img "/>
 
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-        </div>
+        <div className="card-body p-3">
+           <h5 className="card-title py-2">{title}</h5>      {/* py=padding vertical */}
+               <span className="card-title">{description}</span>
+ </div>
 
-        <span className="card-title">{description}</span>
       </div>
       
-    </>
+ 
   );
 };
 export default CardProduct;

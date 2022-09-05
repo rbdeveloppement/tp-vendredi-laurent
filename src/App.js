@@ -10,12 +10,12 @@ function App() {
 
 const productdescriptif = [
   {title: "Femmes",description :"la mode pour elles", Image :'./assets/img/femmes.jpg'},
-  {title: "Hommes",description :"la mode pour lui", Image :"./assets/img/hommes.jpg"},
-  {title: "Enfants",description :"la mode pour eux", Image :"./assets/img/enfants.jpg"},
-  {title: "Bébés",description :"la mode pour eux aussi", Image :"./assets/img/bebe.jpg"}
+  {title: "Hommes",description :"la mode pour lui", Image :"./assets/img/homme.jpg"},
+  {title: "Enfants",description :"la mode pour eux", Image :"./assets/img/enfant.jpg"},
+  {title: "Bébés",description :"la mode pour eux aussi", Image :"./assets/img/bebe.jpeg"}
 ];
-const category = productdescriptif.map((product) => 
-  <div className="col-12 col-lg-3" key={product}>
+const category = productdescriptif.map((product,id) => 
+  <div className="col-12 col-lg-3" key={id}>
   <CategoryCard title={product.title} description={product.description} Image={product.Image}/>
   </div>
 )
