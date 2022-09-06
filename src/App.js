@@ -8,7 +8,6 @@ import FormComponent from "./Components/ContactForm/ContactForm";
 
 
 
-
 function App() {
 
 const productdescriptif = [
@@ -23,22 +22,21 @@ const category = productdescriptif.map((product,id) =>
   </div>
 )
 
-const [isDark, setDark] = useState(false)
+const [isDark, setIsDark] = useState(false)
 
 
 
   return (
-    <div>
+    <div className= {`${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <div>
-        <Home setDark={setDark} isDark={isDark} />
-       
+        <Home setIsDark={setIsDark} isDark={isDark} />
       </div>
       <div className="product-container container">
         <div className="row">
         {category}
         </div>
         <div>
-          <FormComponent setDark={setDark} isDark={isDark}/>
+          <FormComponent setIsDark={setIsDark} isDark={isDark}/>
         </div>
       </div>
     </div>

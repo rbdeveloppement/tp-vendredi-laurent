@@ -1,17 +1,17 @@
 import React from 'react';
 
 
-const SwitchColor = ({isDark ,setDark}) => {
+const SwitchColor = ({isDark ,setIsDark}) => {
 
     const handleClick = () => {
-        setDark(!isDark)
+        setIsDark(!isDark)
       
             }
 
     return (
         <div className="form-check form-switch">
   <input className="form-check-input" type="checkbox" id="flexSwitchCheck" onClick={handleClick}/>
-  <label className="form-check-label" for="flexSwitchCheck"></label>
+  <label className="form-check-label" for="flexSwitchCheck">{isDark?"dark":"light"}</label>
  
 </div>
     );

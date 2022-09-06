@@ -15,7 +15,7 @@ function FormComponent({isDark}) {
   return (
     <>
     
-    <form className= {`${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`} onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
       <h2>
         Contactez nous
       </h2>
