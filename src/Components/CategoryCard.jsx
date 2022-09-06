@@ -2,12 +2,12 @@ import React from "react";
 
 
 
-const CardProduct = ({ title, description, Image, isDark}) => {
+const CardProduct = ({ title, description, Image}) => {
   return (
 <>
    
 
-    <div className={`${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
+    <div>
 
       <img src={Image} alt="" className="card-img " />
 

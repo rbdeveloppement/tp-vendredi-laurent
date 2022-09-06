@@ -2,7 +2,7 @@
 
 
 
-function FormComponent({isDark}) {
+function FormComponent() {
 
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
