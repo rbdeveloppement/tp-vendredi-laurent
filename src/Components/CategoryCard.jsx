@@ -2,12 +2,12 @@ import React from "react";
 
 
 
-const CardProduct = ({ title, description, Image}) => {
+const CardProduct = ({ title, description, Image, isDark}) => {
   return (
 <>
    
- 
-    <div className="card-img-top shadow mb-5 bg-body rounded">
+
+    <div className={`${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
 
       <img src={Image} alt="" className="card-img " />
 
@@ -16,8 +16,9 @@ const CardProduct = ({ title, description, Image}) => {
         <span className="card-title">{description}</span>
       </div>
     </div>
-
+  
     </>
   );
 };
+
 export default CardProduct;

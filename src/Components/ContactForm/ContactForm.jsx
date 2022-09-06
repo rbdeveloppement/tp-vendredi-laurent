@@ -1,6 +1,8 @@
-import form from "react-bootstrap/Form";
 
-function FormComponent() {
+
+
+
+function FormComponent({isDark}) {
 
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
@@ -12,8 +14,9 @@ function FormComponent() {
 
   return (
     <>
-    <form className= "row bg-dark" onSubmit={handleFormSubmit}>
-      <h2 className=" text-light">
+    
+    <form className= {`${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`} onSubmit={handleFormSubmit}>
+      <h2>
         Contactez nous
       </h2>
       <div className="d-flex">

@@ -8,6 +8,7 @@ import FormComponent from "./Components/ContactForm/ContactForm";
 
 
 
+
 function App() {
 
 const productdescriptif = [
@@ -30,13 +31,14 @@ const [isDark, setDark] = useState(false)
     <div>
       <div>
         <Home setDark={setDark} isDark={isDark} />
+       
       </div>
       <div className="product-container container">
         <div className="row">
         {category}
         </div>
         <div>
-          <FormComponent />
+          <FormComponent setDark={setDark} isDark={isDark}/>
         </div>
       </div>
     </div>
