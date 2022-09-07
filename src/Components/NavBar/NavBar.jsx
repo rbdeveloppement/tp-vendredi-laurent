@@ -1,22 +1,32 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from "react";
+import { Navbar } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
+import SwitchColor from "../switchColor/SwitchColor";
 
-
-function Header () {
+function NavBar({ isDark, setIsDark }) {
   return (
     <>
-      <Navbar >
+      <Navbar
+        className={`${
+          isDark
+            ? "Navbar-dark bg-dark text-light"
+            : "Navbar-light bg-light text-dark"
+        }`}
+      >
         <Container>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#">Produits</Nav.Link>
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/products">Produits</NavLink>
           </Nav>
+          <div>
+        <SwitchColor isDark={isDark} setIsDark={setIsDark} />
+      </div>
         </Container>
       </Navbar>
     </>
   );
 }
 
-export default Header;
+export default NavBar;

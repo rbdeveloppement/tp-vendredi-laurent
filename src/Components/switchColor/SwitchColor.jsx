@@ -11,7 +11,7 @@ const SwitchColor = ({isDark ,setIsDark}) => {
     return (
         <div className="form-check form-switch">
   <input className="form-check-input" type="checkbox" id="flexSwitchCheck" onClick={handleClick}/>
-  <label className="form-check-label" for="flexSwitchCheck">{isDark?"dark":"light"}</label>
+  <label className="form-check-label" htmlFor="flexSwitchCheck">{isDark?"dark":"light"}</label>
  
 </div>
     );

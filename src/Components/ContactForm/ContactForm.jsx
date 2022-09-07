@@ -2,7 +2,7 @@
 
 
 
-function FormComponent() {
+function ContactForm() {
 
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
@@ -46,4 +46,4 @@ function FormComponent() {
   );
 }
 
-export default FormComponent;
+export default ContactForm;
