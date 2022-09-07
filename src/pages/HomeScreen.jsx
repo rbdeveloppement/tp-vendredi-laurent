@@ -19,7 +19,7 @@ const HomeScreen = ({ isDark, setIsDark }) => {
   return (
     <>
     <div className={`${isDark ? "bg-dark text-light" : "bg-light text-dark"}`}>
-      <div>
+      <div className="container">
         <h1>La boutique de Rémi Bernier</h1>
       </div>
       

@@ -15,7 +15,7 @@ function ContactForm() {
   return (
     <>
     
-    <form onSubmit={handleFormSubmit}>
+    <form className="container" onSubmit={handleFormSubmit}>
       <h2>
         Contactez nous
       </h2>
